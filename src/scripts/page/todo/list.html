@@ -1,0 +1,42 @@
+<template>
+  <div class="row">
+    <div class="col-md-3" repeat.for="list of lists">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <span
+            class="panel-title pull-left"
+            contenteditable="true"
+            textcontent.bind="list.name"
+            keypress.delegate="keypress($event, list)"
+          ></span>
+          <a class="pointer panel-title pull-right" click.delegate="destroy($index)">
+            <span class="fa fa-trash"></span>
+          </a>
+          <span class="clearfix"></span>
+        </div>
+        <div class="panel-body">
+          <div class="panel panel-default" repeat.for="todo of list.todos">
+            <div class="panel-body">
+              ${todo.todo}
+            </div>
+            <div class="panel-footer">
+              <span class="pull-left">
+                <input type="checkbox" checked.bind="todo.done" click.trigger="updated(todo)">
+              </span>
+              <span class="pull-right">
+                <a class="pointer panel-title pull-right" click.delegate="destroyTodo(list, $index)">
+                  <span class="fa fa-trash"></span>
+                </a>
+              </span>
+              <span class="clearfix"></span>
+            </div>
+          </div>
+          <button class="btn btn-default btn-block" t="Add todo" click.trigger="addTodo(list)"></button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3" if.bind="lists.length < 4">
+      <a class="btn-block btn btn-primary pull-right" t="Create list" href="#/lists/create"></a>
+    </div>
+  </div>
+</template>

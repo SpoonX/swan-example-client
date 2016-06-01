@@ -1,0 +1,14 @@
+<template>
+  <require from="component/core/nav-bar.html"></require>
+  <require from="humane-js/themes/jackedup.css"></require>
+
+  <nav-bar router.bind="router" username.bind="username" authenticated.bind="authenticated"></nav-bar>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="page-header" t="${router.currentInstruction.config.title}"></h1>
+        <router-view></router-view>
+      </div>
+    </div>
+  </div>
+</template>

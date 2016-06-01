@@ -1,0 +1,8 @@
+<template>
+  <form submit.delegate="save()">
+    <div class="form-group">
+      <input type="text" required class="form-control" t="[placeholder]What todo, what todo..." value.bind="list.name">
+    </div>
+    <button type="submit" class="btn btn-success" t="Create list"></button>
+  </form>
+</template>
