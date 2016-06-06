@@ -7,6 +7,7 @@ import {Router} from "aurelia-router";
 import {AuthorizeStep} from "aurelia-authentication";
 import {TWBootstrapViewStrategy} from "aurelia-validation/strategies/twbootstrap-view-strategy";
 import "bootstrap";
+import "font-awesome/css/font-awesome.min.css!text";
 
 export function configure(aurelia) {
   aurelia.use
@@ -34,19 +35,13 @@ export function configure(aurelia) {
       builder.registerEntities(entities);
     })
 
-    /* @see http://aurelia.io/validation */
-    .plugin('aurelia-validation', config => {
-      config.useLocale(appConfig.defaultLocale.locale);
-      config.useViewStrategy(TWBootstrapViewStrategy.AppendToInput);
-    })
-
     /* @see https://github.com/SpoonX/aurelia-notification */
     .plugin('aurelia-notification', config => {
       config.configure({
         notifications: {
           'success': 'humane-jackedup-success',
-          'error'  : 'humane-jackedup-error',
-          'info'   : 'humane-jackedup-info'
+          'error':   'humane-jackedup-error',
+          'info':    'humane-jackedup-info'
         }
       });
     })
@@ -58,19 +53,17 @@ export function configure(aurelia) {
       instance.i18next.use(Backend);
 
       instance.setup({
-        backend    : {
+        backend:     {
           loadPath: 'scripts/config/locale/{{lng}}/{{ns}}.json'
         },
-        lng        : appConfig.defaultLocale.language,
-        attributes : ['t'],
+        lng:         appConfig.defaultLocale.language,
+        attributes:  ['t'],
         fallbackLng: appConfig.defaultLocale.language,
-        debug      : false
+        debug:       false
       });
     });
 
-  //removeIf(production)
   aurelia.use.developmentLogging();
-  //endRemoveIf(production)
 
   aurelia.start().then(a => {
     a.container.get(Router).configure(configureRouter);
