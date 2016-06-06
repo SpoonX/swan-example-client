@@ -1,0 +1,22 @@
+{
+  "Initializing application"                : "Applicatie initialiseren",
+  "Username"                                : "Gebruikersnaam",
+  "Hello developer"                         : "Hallo ontwikkelaar",
+  "(I'd say world, but you are my world <3)": "(Ik zou wereld zeggen, maar jij bent mijn wereld <3)",
+  "Password"                                : "Wachtwoord",
+  "Welcome to your todo application"        : "Welkom bij je todo applicatie",
+  "Navigation"                              : "Navigatie",
+  "Home"                                    : "Thuis",
+  "Signed in as"                            : "Ingelogd als",
+  "Todo lists"                              : "Todo lijsten",
+  "Create list"                             : "Lijst maken",
+  "Login"                                   : "Inloggen",
+  "What todo, what todo..."                 : "Wat todo, wat todo...",
+  "List saved successfully!"                : "Lijst succesvol opgeslagen!",
+  "List deleted successfully!"              : "Lijst succesvol verwijderd",
+  "Something went wrong!"                   : "Er is iets misgegaan!",
+  "Login failed!"                           : "Inloggen mislukt!",
+  "Todo created successfully!"              : "Todo succesvol aangemaakt!",
+  "Todo removed successfully!"              : "Todo succesvol verwijderd!",
+  "logout"                                  : "uitloggen"
+}
