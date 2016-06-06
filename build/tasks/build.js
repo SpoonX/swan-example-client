@@ -8,8 +8,8 @@ var paths           = require('../paths');
 var compilerOptions = require('../babel-options');
 var assign          = Object.assign || require('object.assign');
 var notify          = require('gulp-notify');
-var browserSync     = require('browser-sync');
 var less            = require('gulp-less');
+var outputScripts, outputStyles;
 
 // transpiles changed es6 files to SystemJS format
 // the plumber() call prevents 'pipe breaking' caused
@@ -18,26 +18,18 @@ var less            = require('gulp-less');
 gulp.task('build-system', function() {
   return gulp.src(paths.source)
     .pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
-    .pipe(changed(paths.output, {extension: '.js'}))
+    .pipe(changed(outputScripts, {extension: '.js'}))
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(to5(assign({}, compilerOptions.system())))
     .pipe(sourcemaps.write({includeContent: false, sourceRoot: '/src'}))
-    .pipe(gulp.dest(paths.output));
+    .pipe(gulp.dest(outputScripts));
 });
 
 // copies changed html files to the output directory
 gulp.task('build-html', function() {
   return gulp.src(paths.html)
-    .pipe(changed(paths.output, {extension: '.html'}))
-    .pipe(gulp.dest(paths.output));
-});
-
-// copies changed css files to the output directory
-gulp.task('build-css', function() {
-  return gulp.src(paths.css)
-    .pipe(changed(paths.output, {extension: '.css'}))
-    .pipe(gulp.dest(paths.output))
-    .pipe(browserSync.stream());
+    .pipe(changed(outputScripts, {extension: '.html'}))
+    .pipe(gulp.dest(outputScripts));
 });
 
 gulp.task('build-less', function() {
@@ -45,7 +37,7 @@ gulp.task('build-less', function() {
     .pipe(less({
       paths: ['node_modules']
     }))
-    .pipe(gulp.dest(paths.styles));
+    .pipe(gulp.dest(outputStyles));
 });
 
 // this task calls the clean task (located
@@ -53,9 +45,24 @@ gulp.task('build-less', function() {
 // and build-html tasks in parallel
 // https://www.npmjs.com/package/gulp-run-sequence
 gulp.task('build', function(callback) {
+  outputScripts = paths.devRoot + paths.scripts;
+  outputStyles  = paths.devRoot + paths.styles;
+
   return runSequence(
-    'clean',
-    ['build-system', 'build-html', 'build-css', 'build-less'],
+    'clean-dev',
+    'unbundle',
+    ['build-system', 'build-html', 'build-less'],
+    callback
+  );
+});
+
+gulp.task('build-dist', function(callback) {
+  outputScripts = paths.tmpRoot + paths.scripts;
+  outputStyles  = paths.tmpRoot + paths.styles;
+
+  return runSequence(
+    ['clean-tmp', 'clean-dist'],
+    ['build-system', 'build-html', 'build-less'],
     callback
   );
 });
