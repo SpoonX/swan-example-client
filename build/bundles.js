@@ -1,41 +1,39 @@
 module.exports = {
   "bundles": {
-    "dist/app-build": {
+    "scripts/app-build": {
       "includes": [
-        "[*.js]",
-        "*.html!text",
-        "*.css!text"
-      ],
-      "options": {
-        "inject": true,
-        "minify": true,
-        "depCache": true,
-        "rev": false
-      }
-    },
-    "dist/aurelia": {
-      "includes": [
-        "aurelia-framework",
-        "aurelia-bootstrapper",
+        "aurelia-orm/**/*.html!text",
+        "humane-js/themes/jackedup.css!text",
+        "aurelia-api",
+        "aurelia-authentication",
+        "aurelia-dependency-injection",
         "aurelia-fetch-client",
-        "aurelia-router",
-        "aurelia-animator-css",
-        "aurelia-templating-binding",
+        "aurelia-framework",
+        "aurelia-history-browser",
+        "aurelia-i18n",
+        "aurelia-logging-console",
+        "aurelia-notification",
+        "aurelia-orm",
+        "aurelia-pal",
+        "aurelia-pal-browser",
         "aurelia-polyfills",
+        "aurelia-router",
+        "aurelia-templating-binding",
         "aurelia-templating-resources",
         "aurelia-templating-router",
+        "aurelia-validation",
+        "aurelia-loader",
         "aurelia-loader-default",
-        "aurelia-history-browser",
-        "aurelia-logging-console",
-        "bootstrap",
-        "bootstrap/css/bootstrap.css!text",
-        "jquery"
+        "aurelia-bootstrapper",
+        "text",
+        "**/*.js",
+        "**/*.html!text"
       ],
-      "options": {
-        "inject": true,
-        "minify": true,
+      "options":  {
+        "inject":   true,
+        "minify":   true,
         "depCache": false,
-        "rev": false
+        "rev":      false
       }
     }
   }

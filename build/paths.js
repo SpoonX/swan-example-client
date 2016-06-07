@@ -1,20 +1,27 @@
-var root = 'src/';
-var appRoot = root + 'scripts/';
-var outputRoot = 'dist/';
-var exportSrvRoot = 'export/';
+var root       = 'src/';
+var scriptRoot = root + 'scripts/';
+var devRoot    = '.dev/';
+var tmpRoot    = '.tmp/';
+var distRoot   = 'dist/';
 
 module.exports = {
-  root: appRoot,
-  source: appRoot + '**/*.js',
-  html: appRoot + '**/*.html',
-  css: appRoot + '**/*.css',
-  less: root + 'styles/main.less',
-  styles: outputRoot + '/styles',
-  style: root + 'styles/**/*.css',
-  output: outputRoot + 'scripts/',
-  clean: outputRoot,
-  exportSrv: exportSrvRoot,
-  doc: './doc',
-  e2eSpecsSrc: 'test/e2e/src/**/*.js',
+  root:         root,
+  scriptRoot:   scriptRoot,
+  source:       scriptRoot + '**/*.js',
+  html:         scriptRoot + '**/*.html',
+  css:          scriptRoot + '**/*.css',
+  less:         root + 'styles/main.less',
+  style:        root + 'styles/**/*.css',
+  styles:       'styles/',
+  scripts:      'scripts/',
+  locales:      'scripts/config/locale/',
+  devRoot:      devRoot,
+  tmpRoot:      tmpRoot,
+  distRoot:     distRoot,
+  config:       root + 'config.js',
+  index:        root + 'index.html',
+  jspmPackages: root + 'jspm_packages',
+  doc:          './doc',
+  e2eSpecsSrc:  'test/e2e/src/**/*.js',
   e2eSpecsDist: 'test/e2e/dist/'
 };
