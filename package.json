@@ -1,22 +1,22 @@
 {
-  "name": "aurelia-skeleton-navigation",
-  "version": "1.0.0-beta.1.2.2",
-  "description": "A starter kit for building a standard navigation-style app with Aurelia.",
+  "name": "aurelia-todo-client",
+  "version": "0.0.1",
+  "description": "An example project to demonstrate several high-level components provided by SpoonX.",
   "keywords": [
     "aurelia",
-    "navigation",
-    "skeleton"
+    "todo",
+    "spoonx"
   ],
-  "homepage": "http://aurelia.io",
+  "homepage": "http://spoonx.nl",
   "bugs": {
-    "url": "https://github.com/aurelia/skeleton-navigation/issues"
+    "url": "https://github.com/spoonx/aurelia-todo-client/issues"
   },
-  "license": "CC0-1.0",
-  "author": "Rob Eisenberg <rob@bluespire.com> (http://robeisenberg.com/)",
+  "license": "MIT",
+  "author": "RWOverdijk <wesley@spoonx.nl> (http://spoonx.nl/)",
   "main": "dist/main.js",
   "repository": {
     "type": "git",
-    "url": "http://github.com/aurelia/skeleton-navigation"
+    "url": "http://github.com/spoonx/aurelia-todo-client"
   },
   "scripts": {
     "test": "gulp test",
