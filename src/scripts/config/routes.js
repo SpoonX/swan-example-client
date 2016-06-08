@@ -35,5 +35,13 @@ export default [
     auth    : true,
     moduleId: 'page/todo/create-list',
     title   : 'Create list'
-  }
+  },
+  {
+    route   : '/viewmanager',
+    name    : 'viewmanager',
+    moduleId: 'page/viewmanager/demo',
+    nav     : true,
+    auth    : true,
+    title   : 'Viewmanager'
+  },
 ];
