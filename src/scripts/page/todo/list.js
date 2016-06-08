@@ -75,6 +75,8 @@ export class List {
       .catch(() => {
         this.notification.error('Something went wrong!');
       });
+
+    return true;
   }
 
   keypress(event, list) {
