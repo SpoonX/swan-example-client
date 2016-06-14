@@ -1,5 +1,5 @@
 {
-  "name": "aurelia-todo-client",
+  "name": "swan-example-client",
   "version": "0.0.1",
   "description": "An example project to demonstrate several high-level components provided by SpoonX.",
   "keywords": [
@@ -9,14 +9,14 @@
   ],
   "homepage": "http://spoonx.nl",
   "bugs": {
-    "url": "https://github.com/spoonx/aurelia-todo-client/issues"
+    "url": "https://github.com/spoonx/swan-example-client/issues"
   },
   "license": "MIT",
   "author": "RWOverdijk <wesley@spoonx.nl> (http://spoonx.nl/)",
   "main": "dist/main.js",
   "repository": {
     "type": "git",
-    "url": "http://github.com/spoonx/aurelia-todo-client"
+    "url": "http://github.com/spoonx/swan-example-client"
   },
   "scripts": {
     "test": "gulp test",

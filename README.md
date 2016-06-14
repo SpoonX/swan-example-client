@@ -1,17 +1,18 @@
-# aurelia-todo-client
+# swan-example-client
 
-A trello-like todo client featuring:
+A trello-like todo client, and other examples featuring:
 
 - Making separate lists
 - Creating items in todo lists
 - User separated
-- User authorization 
+- User authorization
+- Demonstration of components
 
 ## Installing
-For installation, follow the instructions on the [project repository](https://github.com/SpoonX/aurelia-todo).
+For installation, follow the instructions on the [project repository](https://github.com/SpoonX/swan-example).
 
 ## What
-Aurelia-todo-client is part of an example project to demonstrate several high-level components provided by SpoonX. For more info go to the [project repository](https://github.com/SpoonX/aurelia-todo).
+swan-example-client is part of an example project to demonstrate several high-level components provided by SpoonX. For more info go to the [project repository](https://github.com/SpoonX/swan-example).
 
 The component demonstrates:
 
