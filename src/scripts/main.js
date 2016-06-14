@@ -8,7 +8,6 @@ import {AuthorizeStep} from "aurelia-authentication";
 import {TWBootstrapViewStrategy} from "aurelia-validation/strategies/twbootstrap-view-strategy";
 import "bootstrap";
 import "font-awesome/css/font-awesome.min.css!text";
-import {Config as ViewManagerConfig} from 'aurelia-view-manager';
 
 export function configure(aurelia) {
   aurelia.use
@@ -62,14 +61,12 @@ export function configure(aurelia) {
         fallbackLng: appConfig.defaultLocale.language,
         debug      : false
       });
-    });
+    })
 
-  /* @see https://github.com/SpoonX/aurelia-view-manager */
-  aurelia.container.get(ViewManagerConfig).configureNamespace('view-manager-demo', {
-    framework: 'bootstrap',
-    base     : './page/viewmanager',
-    location : '{{base}}/{{framework}}/bold.html', // available: {{view}} = demo, bold, underline
-  });
+    .plugin('font-awesome')
+
+    /* @see https://github.com/spoonx/aurelia-datatable */
+    .plugin('aurelia-datatable');
 
   aurelia.use.developmentLogging();
 

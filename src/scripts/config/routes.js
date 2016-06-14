@@ -37,11 +37,11 @@ export default [
     title   : 'Create list'
   },
   {
-    route   : '/viewmanager',
-    name    : 'viewmanager',
-    moduleId: 'page/viewmanager/demo',
+    route   : '/datatable',
+    name    : 'datatable',
+    moduleId: 'page/datatable/demo',
     nav     : true,
     auth    : true,
-    title   : 'Viewmanager'
-  },
+    title   : 'Datatable'
+  }
 ];

@@ -1,0 +1,15 @@
+<template>
+  <p t="This example reads the todos to fill the datatable"></p>
+
+  <datatable
+    destroyed.delegate="myEventCallback($event)"
+    columns="id, todo as title, done as checked"
+    repository.bind="todoRepository"
+    search-column="todo"
+    searchable
+    sortable
+    edit.call="myFunctionCallback($event)"
+    destroy
+  ></datatable>
+
+</template>
