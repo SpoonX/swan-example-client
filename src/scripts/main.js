@@ -40,8 +40,8 @@ export function configure(aurelia) {
       config.configure({
         notifications: {
           'success': 'humane-jackedup-success',
-          'error':   'humane-jackedup-error',
-          'info':    'humane-jackedup-info'
+          'error'  : 'humane-jackedup-error',
+          'info'   : 'humane-jackedup-info'
         }
       });
     })
@@ -56,12 +56,21 @@ export function configure(aurelia) {
         backend:     {
           loadPath: 'scripts/config/locale/{{lng}}/{{ns}}.json'
         },
-        lng:         appConfig.defaultLocale.language,
-        attributes:  ['t'],
+        lng        : appConfig.defaultLocale.language,
+        attributes : ['t'],
         fallbackLng: appConfig.defaultLocale.language,
-        debug:       false
+        debug      : false
       });
-    });
+    })
+
+    /* @see https://github.com/fortawesome/font-awesome */
+    .plugin('font-awesome')
+
+    /* @see https://github.com/spoonx/aurelia-datatable */
+    .plugin('aurelia-datatable')
+
+    /* @see https://github.com/spoonx/aurelia-pager */
+    .plugin('aurelia-pager');
 
   aurelia.use.developmentLogging();
 

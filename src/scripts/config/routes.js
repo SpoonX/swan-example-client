@@ -35,5 +35,21 @@ export default [
     auth    : true,
     moduleId: 'page/todo/create-list',
     title   : 'Create list'
+  },
+  {
+    route   : '/datatable',
+    name    : 'datatable',
+    moduleId: 'page/datatable/demo',
+    nav     : true,
+    auth    : true,
+    title   : 'Datatable'
+  },
+  {
+    route   : '/pager',
+    name    : 'pager',
+    moduleId: 'page/pager/demo',
+    nav     : true,
+    auth    : true,
+    title   : 'Pager'
   }
 ];
