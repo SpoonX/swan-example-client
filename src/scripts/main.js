@@ -63,6 +63,7 @@ export function configure(aurelia) {
       });
     })
 
+    /* @see https://github.com/fortawesome/font-awesome */
     .plugin('font-awesome')
 
     /* @see https://github.com/spoonx/aurelia-datatable */
