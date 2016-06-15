@@ -1,0 +1,10 @@
+<template>
+  <p t="User generated data"></p>
+  <pager resource.bind="pagerData"></pager>
+
+  <p t="Database generated data (from todo)"></p>
+  <pager resource.bind="todoRepository"></pager>
+
+  <p t="Setting the limit and pagerange"></p>
+  <pager resource.bind="pagerData" limit.bind="1" pagerange.bind="1"></pager>
+</template>
