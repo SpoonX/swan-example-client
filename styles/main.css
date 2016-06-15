@@ -6730,3 +6730,6 @@ body {
 .pointer {
   cursor: pointer;
 }
+#search {
+  margin-bottom: 20px;
+}
