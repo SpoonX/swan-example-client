@@ -19,5 +19,8 @@
   "Todo created successfully!"                        : "Todo succesvol aangemaakt!",
   "Todo removed successfully!"                        : "Todo succesvol verwijderd!",
   "logout"                                            : "uitloggen",
-  "This example reads the todos to fill the datatable": "Dit voorbeeld leest de todo's uit om datatable te vullen."
+  "This example reads the todos to fill the datatable": "Dit voorbeeld leest de todo's uit om datatable te vullen.",
+  "User generated data"                               : "Gebruiker gegenereerde data",
+  "Database generated data (from todo)"               : "Database gegenereerde data (van todo)",
+  "Setting the limit and pagerange"                   : "Met de limiet en pagina-afstand instelling"
 }

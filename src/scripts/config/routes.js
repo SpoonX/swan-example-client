@@ -43,5 +43,13 @@ export default [
     nav     : true,
     auth    : true,
     title   : 'Datatable'
+  },
+  {
+    route   : '/pager',
+    name    : 'pager',
+    moduleId: 'page/pager/demo',
+    nav     : true,
+    auth    : true,
+    title   : 'Pager'
   }
 ];

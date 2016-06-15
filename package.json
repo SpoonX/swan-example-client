@@ -1,5 +1,5 @@
 {
-  "name": "aurelia-todo-client",
+  "name": "swan-example-client",
   "version": "0.0.2",
   "description": "An example project to demonstrate several high-level components provided by SpoonX.",
   "keywords": [
@@ -9,14 +9,14 @@
   ],
   "homepage": "http://spoonx.nl",
   "bugs": {
-    "url": "https://github.com/spoonx/aurelia-todo-client/issues"
+    "url": "https://github.com/spoonx/swan-example-client/issues"
   },
   "license": "MIT",
   "author": "RWOverdijk <wesley@spoonx.nl> (http://spoonx.nl/)",
   "main": "dist/main.js",
   "repository": {
     "type": "git",
-    "url": "http://github.com/spoonx/aurelia-todo-client"
+    "url": "http://github.com/spoonx/swan-example-client"
   },
   "scripts": {
     "test": "gulp test",
@@ -83,7 +83,7 @@
       "aurelia-loader-default": "npm:aurelia-loader-default@^1.0.0-beta.1.1.3",
       "aurelia-logging-console": "npm:aurelia-logging-console@^1.0.0-beta.1.1.4",
       "aurelia-notification": "npm:aurelia-notification@^1.0.0-rc1",
-      "aurelia-orm": "npm:aurelia-orm@^3.0.0-rc3",
+      "aurelia-orm": "npm:aurelia-orm@^3.0.0-rc4",
       "aurelia-pager": "npm:aurelia-pager@^0.0.4",
       "aurelia-pal": "npm:aurelia-pal@^1.0.0-beta.1.2.2",
       "aurelia-pal-browser": "npm:aurelia-pal-browser@^1.0.0-beta.1.1.4",

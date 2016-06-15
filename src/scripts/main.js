@@ -66,7 +66,10 @@ export function configure(aurelia) {
     .plugin('font-awesome')
 
     /* @see https://github.com/spoonx/aurelia-datatable */
-    .plugin('aurelia-datatable');
+    .plugin('aurelia-datatable')
+
+    /* @see https://github.com/spoonx/aurelia-pager */
+    .plugin('aurelia-pager');
 
   aurelia.use.developmentLogging();
 
