@@ -22,5 +22,26 @@
   "This example reads the todos to fill the datatable": "Dit voorbeeld leest de todo's uit om datatable te vullen.",
   "User generated data"                               : "Gebruiker gegenereerde data",
   "Database generated data (from todo)"               : "Database gegenereerde data (van todo)",
-  "Setting the limit and pagerange"                   : "Met de limiet en pagina-afstand instelling"
+  "Setting the limit and pagerange"                   : "Met de limiet en pagina-afstand instelling",
+  "pet"     : {
+    "owner": "Huisdier eigenaar"
+  },
+  "remember": "Onthoud",
+  "feedback": "Terugkoppeling",
+  "name"    : "Naam",
+  "password": "Wachtwoord",
+  "food"    : "Eten",
+  "pets"    : "Huisdieren",
+  "favorite": "Favoriet",
+  "tags"    : "Labels",
+  "tag"     : "Label",
+  "email"   : "E-mail",
+  "color"   : "Kleur",
+  "remove"  : "Verwijderen",
+  "add"     : "Toeveoegen",
+  "add tag" : "Tag toevoegen",
+  "product" : "Artikel",
+  "message" : "Boodschap",
+  "todo"    : "Taak",
+  "done"    : "Gedaan"
 }

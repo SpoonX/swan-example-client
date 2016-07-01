@@ -77,6 +77,7 @@
       "aurelia-datatable": "npm:aurelia-datatable@^0.0.3",
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@^1.0.0-beta.1.2.3",
       "aurelia-fetch-client": "npm:aurelia-fetch-client@^1.0.0-beta.1.1.1",
+      "aurelia-form": "npm:aurelia-form@^0.1.6",
       "aurelia-framework": "npm:aurelia-framework@^1.0.0-beta.1.2.5",
       "aurelia-history-browser": "npm:aurelia-history-browser@^1.0.0-beta.1.1.4",
       "aurelia-i18n": "npm:aurelia-i18n@^0.5.2",

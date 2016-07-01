@@ -70,7 +70,10 @@ export function configure(aurelia) {
     .plugin('aurelia-datatable')
 
     /* @see https://github.com/spoonx/aurelia-pager */
-    .plugin('aurelia-pager');
+    .plugin('aurelia-pager')
+
+    /* @see https://github.com/spoonx/aurelia-form */
+    .plugin('aurelia-form');
 
   aurelia.use.developmentLogging();
 
