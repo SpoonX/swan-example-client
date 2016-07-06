@@ -3,13 +3,15 @@
 
   <datatable
     destroyed.delegate="myEventCallback($event)"
-    columns="id, todo as title, done as checked"
+    columns="id, todo as title, list.name as List, done as checked"
     repository.bind="todoRepository"
     search-column="todo"
     searchable
     sortable
     edit.call="myFunctionCallback($event)"
     destroy
+    actions.bind="actions"
+    populate="list"
   ></datatable>
 
 </template>
