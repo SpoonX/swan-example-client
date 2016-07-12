@@ -24,6 +24,20 @@ export function configure(aurelia) {
       });
     })
 
+    .plugin('aurelia-form')
+
+    /* @see http://aurelia-charts.spoonx.org/configuration.html */
+    .plugin('aurelia-charts-c3')
+
+    /* @see http://aurelia-charts.spoonx.org/configuration.html */
+    .plugin('aurelia-charts', chart => {
+      chart.configure({
+        defaults: {
+          library: 'C3'
+        }
+      });
+    })
+
     /* @see http://aurelia-authentication.spoonx.org/configuration.html */
     .plugin('aurelia-authentication', baseConfig => {
       baseConfig.configure(authConfig);

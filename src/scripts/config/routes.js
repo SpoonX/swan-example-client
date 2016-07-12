@@ -75,5 +75,13 @@ export default [
     nav     : true,
     auth    : true,
     title   : 'Form'
+  },
+  {
+    route   : '/charts',
+    name    : 'charts',
+    moduleId: 'page/charts/demo',
+    nav     : true,
+    auth    : true,
+    title   : 'Charts'
   }
 ];
