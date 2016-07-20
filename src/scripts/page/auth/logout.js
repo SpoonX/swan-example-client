@@ -8,6 +8,6 @@ export class Logout {
   }
 
   activate () {
-    this.authService.logout();
+    return this.authService.logout();
   }
 }
