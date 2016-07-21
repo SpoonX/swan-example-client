@@ -130,7 +130,7 @@ function petOwnerForm(bindingEngine) {
 
   let model = {
     food    : 'other',
-    favorite: [],
+    favorite: 'cat',
     pets    : petsModel
   };
 
@@ -139,16 +139,10 @@ function petOwnerForm(bindingEngine) {
       key    : 'food',
       type   : 'select',
       options: [
-        {
-          name : 'Premium',
-          value: 'premium'
-        },{
-          name : 'Basic',
-          value: 'basic'
-        },{
-          name : 'Other',
-          value: 'other'
-        }
+        "Brand",
+        {name : 'Other'},
+        {value: 'Basic'},
+        {name : 'Premium', value: 'premium'}
       ]
     },
     {
