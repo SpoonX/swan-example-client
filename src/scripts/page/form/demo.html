@@ -1,0 +1,44 @@
+<template>
+
+  <section class="row fluid-container">
+
+    <div class="col-xs-4">
+      <h3 t="feedback">Feedback</h3>
+      <schema-form
+        schema.bind="feedbackForm.schema"
+        model.bind ="feedbackForm.model">
+      </schema-form>
+    </div>
+
+    <div class="col-xs-4">
+      <h3>${loginForm.model.email}</h3>
+      <schema-form
+        schema.bind="loginForm.schema"
+        model.bind ="loginForm.model">
+      </schema-form>
+    </div>
+
+    <div class="col-xs-4">
+      <h3 t="pet.owner"></h3>
+      <schema-form
+        schema.bind="petOwnerForm.schema"
+        model.bind ="petOwnerForm.model">
+      </schema-form>
+    </div>
+
+    <div class="col-xs-4">
+      <h3 t="product"></h3>
+      <schema-form
+        schema.bind="productForm.schema"
+        model.bind ="productForm.model">
+      </schema-form>
+    </div>
+
+    <div class="col-xs-4">
+      <h3 t="todo">Todo</h3>
+      <entity-form entity.bind="entity"></entity-form>
+    </div>
+
+  </section>
+
+</template>

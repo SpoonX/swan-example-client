@@ -51,5 +51,13 @@ export default [
     nav     : true,
     auth    : true,
     title   : 'Pager'
+  },
+  {
+    route   : '/form',
+    name    : 'form',
+    moduleId: 'page/form/demo',
+    nav     : true,
+    auth    : true,
+    title   : 'Form'
   }
 ];
