@@ -1,0 +1,40 @@
+<template>
+  <div class="panel panel-primary">
+    <div class="panel-heading">Association select from database "todo"</div>
+    <div class="panel-body">
+      <association-select
+        repository.bind="listRepository"
+        property="name"
+        error.bind="listError"
+        value.bind="listId"
+      ></association-select>
+
+      <div class="alert alert-warning" if.bind="!!listError">
+        Error loading lists: ${listError.statusText}
+      </div>
+      <div if.bind="!listError">
+        <association-select
+          repository.bind="todoRepository"
+          property="todo"
+          error.bind="todoError"
+          value.bind="todoId"
+          criteria.bind="listId ? {where:{list:listId}} : {}"
+        ></association-select>
+
+        <div class="alert alert-warning" if.bind="!!totError && !listError">
+          Error loading lists: ${todoError.statusText}
+        </div>
+      </div>
+
+      <div class="panel panel-primary">
+        <div class="panel-body">
+          <div class="panel panel-default">
+            <div class="panel-body">
+            ${listId} :  ${todoId}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
