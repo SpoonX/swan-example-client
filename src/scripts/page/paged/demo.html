@@ -1,0 +1,36 @@
+<template>
+  <div class="panel panel-primary">
+    <div class="panel-heading">Database from todo: page:2 limit:2</div>
+    <div class="panel-body">
+      <paged repository.bind="todoRepository" data.bind="data" limit=2 page=2 error.bind="error">
+        <div repeat.for="todo of data" if.bind="!error">
+          <div class="row">
+            <div class="col-xs-4">${todo.todo}</div>
+            <div class="col-xs-4">${todo.list.name}</div>
+            <div class="col-xs-4"><a href=mailto:${todo.user.username}>${todo.user.username}</a></div>
+          </div>
+        </div>
+
+        <div if.bind="!!error">
+          Yeah, that didn't work!
+        </div>
+      </paged>
+    </div>
+  </div>
+
+  <div class="panel panel-primary">
+    <div class="panel-heading">Database error</div>
+    <div class="panel-body">
+      <paged repository.bind="notARepository" data.bind="noData" error.bind="otherError">
+        <div repeat.for="todo of noData" if.bind="!otherError">
+          Nothing to see here.
+        </div>
+
+        <div class="alert alert-warning" if.bind="!!otherError">
+          Yeah, that didn't work!
+          <p> Error: ${otherError.statusText}</p>
+        </div>
+      </paged>
+    </div>
+  </div>
+</template>

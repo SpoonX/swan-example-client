@@ -53,6 +53,14 @@ export default [
     title   : 'Pager'
   },
   {
+    route   : '/paged',
+    name    : 'paged',
+    moduleId: 'page/paged/demo',
+    nav     : true,
+    auth    : true,
+    title   : 'Paged'
+  },
+  {
     route   : '/form',
     name    : 'form',
     moduleId: 'page/form/demo',
