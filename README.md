@@ -27,7 +27,7 @@ The component demonstrates:
 ## Build tasks
 
 ### `gulp bundle`
-Creates a production-ready build in the `dist/` directory. Needs admin rights for symlinking.
+Creates a production-ready build in the `dist/` directory. On windows, admin rights at needed for symlinking.
 The contents of this directory can be uploaded and served to visitors.
 You can use `gulp serve-bundle` to check the resulting bundle.
 
