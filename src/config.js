@@ -36,6 +36,7 @@ System.config({
     "bootstrap": "github:twbs/bootstrap@3.3.6",
     "fetch": "github:github/fetch@1.0.0",
     "font-awesome": "npm:font-awesome@4.6.3",
+    "get-prop": "npm:get-prop@0.0.10",
     "humane-js": "npm:humane-js@3.2.2",
     "i18next-xhr-backend": "npm:i18next-xhr-backend@0.6.0",
     "jquery": "npm:jquery@2.2.4",

@@ -22,6 +22,7 @@ module.exports = {
         "humane-js/themes/jackedup.css!text",
         "aurelia-api",
         "aurelia-authentication",
+        "[aurelia-authentication/**/*.js]",
         "aurelia-datatable",
         "[aurelia-datatable/**/*.js]",
         "aurelia-dependency-injection",
@@ -37,6 +38,7 @@ module.exports = {
         "aurelia-logging-console",
         "aurelia-notification",
         "aurelia-orm",
+        "[aurelia-orm/**/*.js]",
         "aurelia-pager",
         "[aurelia-pager/**/*.js]",
         "aurelia-pal",
@@ -52,6 +54,7 @@ module.exports = {
         "bootstrap",
         "bootstrap/css/bootstrap.css!text",
         "fetch",
+        "get-prop",
         "jquery",
         "i18next-xhr-backend"
       ],
