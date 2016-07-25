@@ -1,6 +1,6 @@
 .dev
 node_modules
-./jspm_packages
+src/jspm_packages
 bower_components
 .idea
 .DS_STORE
