@@ -1,6 +1,6 @@
 <template>
   <div class="panel panel-primary">
-    <div class="panel-heading">Database from todo: page:2 limit:2</div>
+    <div class="panel-heading" t="Database from todo: page:2 limit:2"></div>
     <div class="panel-body">
       <paged repository.bind="todoRepository" data.bind="data" limit=2 page=2 error.bind="error">
         <div repeat.for="todo of data" if.bind="!error">
@@ -11,24 +11,25 @@
           </div>
         </div>
 
-        <div if.bind="!!error">
-          Yeah, that didn't work!
+        <div class="alert alert-warning" if.bind="!!error">
+          <span t="Yeah, that didn't work!"></span>
+          <p><span t="Error: "></span>${error.statusText}</p>
         </div>
       </paged>
     </div>
   </div>
 
   <div class="panel panel-primary">
-    <div class="panel-heading">Database error</div>
+    <div class="panel-heading" t="Database error"></div>
     <div class="panel-body">
       <paged repository.bind="notARepository" data.bind="noData" error.bind="otherError">
         <div repeat.for="todo of noData" if.bind="!otherError">
-          Nothing to see here.
+          This shouldn't be visible
         </div>
 
         <div class="alert alert-warning" if.bind="!!otherError">
-          Yeah, that didn't work!
-          <p> Error: ${otherError.statusText}</p>
+          <span t="Yeah, that didn't work!"></span>
+          <p><span t="Error: "></span>${otherError.statusText}</p>
         </div>
       </paged>
     </div>

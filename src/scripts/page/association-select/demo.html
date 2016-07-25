@@ -1,28 +1,29 @@
 <template>
   <div class="panel panel-primary">
-    <div class="panel-heading">Association select from database "todo"</div>
+    <div class="panel-heading" t="Association select from database 'todo'"></div>
     <div class="panel-body">
       <association-select
-        repository.bind="listRepository"
+        resource="list"
         property="name"
         error.bind="listError"
         value.bind="listId"
+        if.bind="!listError"
       ></association-select>
-
       <div class="alert alert-warning" if.bind="!!listError">
-        Error loading lists: ${listError.statusText}
+        <span t="Error loading lists: "></span>${listError.statusText}
       </div>
+
       <div if.bind="!listError">
         <association-select
-          repository.bind="todoRepository"
+          resource="todo"
           property="todo"
           error.bind="todoError"
           value.bind="todoId"
           criteria.bind="listId ? {where:{list:listId}} : {}"
+          if.bind="!todoError"
         ></association-select>
-
-        <div class="alert alert-warning" if.bind="!!totError && !listError">
-          Error loading lists: ${todoError.statusText}
+        <div class="alert alert-warning" if.bind="!!todoError">
+          <span t="Error loading lists: "></span>${todoError.statusText}
         </div>
       </div>
 
@@ -30,7 +31,7 @@
         <div class="panel-body">
           <div class="panel panel-default">
             <div class="panel-body">
-            ${listId} :  ${todoId}
+            <span t="Selected: "></span>${listId} :  ${todoId}
             </div>
           </div>
         </div>
