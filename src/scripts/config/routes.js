@@ -53,6 +53,22 @@ export default [
     title   : 'Pager'
   },
   {
+    route   : '/association-select',
+    name    : 'association-select',
+    moduleId: 'page/association-select/demo',
+    nav     : true,
+    auth    : true,
+    title   : 'Association select'
+  },
+  {
+    route   : '/paged',
+    name    : 'paged',
+    moduleId: 'page/paged/demo',
+    nav     : true,
+    auth    : true,
+    title   : 'Paged'
+  },
+  {
     route   : '/form',
     name    : 'form',
     moduleId: 'page/form/demo',

@@ -6733,3 +6733,6 @@ body {
 #search {
   margin-bottom: 20px;
 }
+paged > div {
+  overflow: hidden;
+}

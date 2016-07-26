@@ -7,7 +7,6 @@ import {Router} from "aurelia-router";
 import {AuthorizeStep} from "aurelia-authentication";
 import {TWBootstrapViewStrategy} from "aurelia-validation/strategies/twbootstrap-view-strategy";
 import "bootstrap";
-import "font-awesome/css/font-awesome.min.css!text";
 
 export function configure(aurelia) {
   aurelia.use
@@ -62,9 +61,6 @@ export function configure(aurelia) {
         debug      : false
       });
     })
-
-    /* @see https://github.com/fortawesome/font-awesome */
-    .plugin('font-awesome')
 
     /* @see https://github.com/spoonx/aurelia-datatable */
     .plugin('aurelia-datatable')
