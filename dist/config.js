@@ -106,7 +106,6 @@ System.config({
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0-rc.1.0.1",
       "aurelia-templating": "npm:aurelia-templating@1.0.0-rc.1.0.2",
       "aurelia-validation": "npm:aurelia-validation@0.6.6",
-      "extend": "npm:extend@3.0.0",
       "get-prop": "npm:get-prop@0.0.10",
       "typer": "npm:typer@1.1.0"
     },
