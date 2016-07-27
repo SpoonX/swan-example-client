@@ -8,6 +8,12 @@ A trello-like todo client, and other examples featuring:
 - User authorization
 - Demonstration of components
 
+## Demo
+You can find a running demo here: http://swan-example.spoonx.org/
+
+Username: example
+Password: example
+
 ## Installing
 For installation, follow the instructions on the [project repository](https://github.com/SpoonX/swan-example).
 
