@@ -20,12 +20,16 @@ The component demonstrates:
 - [aurelia-api](https://github.com/SpoonX/aurelia-api)
 - [aurelia-orm](https://github.com/SpoonX/aurelia-orm)
 - [aurelia-notification](https://github.com/SpoonX/aurelia-notification)
+- [aurelia-datatable](https://github.com/SpoonX/aurelia-datatable)
+- [aurelia-pager](https://github.com/SpoonX/aurelia-pager)
+- [aurelia-form](https://github.com/SpoonX/aurelia-form)
 
 ## Build tasks
 
-### Bundle
-Creates a production-ready build in the `dist/` directory.
+### `gulp bundle`
+Creates a production-ready build in the `dist/` directory. On windows, admin rights at needed for symlinking.
 The contents of this directory can be uploaded and served to visitors.
+You can use `gulp serve-bundle` to check the resulting bundle.
 
-### Watch
+### `gulp watch`
 Transpiles to `.dev` (the new "`dist`"). This has been optimized in performance (no unneeded copying of files).
