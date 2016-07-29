@@ -79,6 +79,7 @@
       "aurelia-datatable": "github:spoonx/aurelia-datatable@master",
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@^1.0.0-rc.1.0.1",
       "aurelia-fetch-client": "npm:aurelia-fetch-client@^1.0.0-rc.1.0.1",
+      "aurelia-filter": "github:spoonx/aurelia-filter@master",
       "aurelia-form": "github:spoonx/aurelia-form@master",
       "aurelia-history-browser": "npm:aurelia-history-browser@^1.0.0-rc.1.0.0",
       "aurelia-i18n": "npm:aurelia-i18n@^1.0.0-rc.1.0.0",

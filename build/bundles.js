@@ -27,6 +27,8 @@ module.exports = {
         "[aurelia-datatable/**/*.js]",
         "aurelia-dependency-injection",
         "aurelia-fetch-client",
+        "aurelia-filter",
+        "[aurelia-filter/**/*.js]",
         "aurelia-form",
         "[aurelia-form/**/*.js]",
         "aurelia-framework",

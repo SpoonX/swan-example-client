@@ -6,6 +6,7 @@ System.config({
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
+
   map: {
     "aurelia-animator-css": "npm:aurelia-animator-css@1.0.0",
     "aurelia-api": "github:spoonx/aurelia-api@master",
@@ -14,6 +15,7 @@ System.config({
     "aurelia-datatable": "github:spoonx/aurelia-datatable@master",
     "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0",
     "aurelia-fetch-client": "npm:aurelia-fetch-client@1.0.0",
+    "aurelia-filter": "github:spoonx/aurelia-filter@master",
     "aurelia-form": "github:spoonx/aurelia-form@master",
     "aurelia-history-browser": "npm:aurelia-history-browser@1.0.0",
     "aurelia-i18n": "npm:aurelia-i18n@1.0.0",
@@ -88,6 +90,12 @@ System.config({
       "json-statham": "npm:json-statham@1.6.0",
       "typer": "npm:typer@1.1.0"
     },
+    "github:spoonx/aurelia-filter@master": {
+      "aurelia-form": "npm:aurelia-form@0.1.7",
+      "aurelia-framework": "npm:aurelia-framework@1.0.1",
+      "aurelia-view-manager": "npm:aurelia-view-manager@0.0.5",
+      "extend": "npm:extend@3.0.0"
+    },
     "github:spoonx/aurelia-form@master": {
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0",
       "aurelia-framework": "npm:aurelia-framework@1.0.1",
@@ -139,12 +147,6 @@ System.config({
       "aurelia-pal": "npm:aurelia-pal@1.0.0",
       "aurelia-templating": "npm:aurelia-templating@1.0.0"
     },
-    "npm:aurelia-api@3.0.0-rc4": {
-      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0",
-      "aurelia-fetch-client": "npm:aurelia-fetch-client@1.0.0",
-      "extend": "npm:extend@3.0.0",
-      "qs": "npm:qs@6.2.1"
-    },
     "npm:aurelia-binding@1.0.1": {
       "aurelia-logging": "npm:aurelia-logging@1.0.0",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0",
@@ -173,6 +175,14 @@ System.config({
     },
     "npm:aurelia-event-aggregator@1.0.0": {
       "aurelia-logging": "npm:aurelia-logging@1.0.0"
+    },
+    "npm:aurelia-form@0.1.7": {
+      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0",
+      "aurelia-framework": "npm:aurelia-framework@1.0.1",
+      "aurelia-logging": "npm:aurelia-logging@1.0.0",
+      "aurelia-validatejs": "npm:aurelia-validatejs@0.6.0",
+      "aurelia-view-manager": "npm:aurelia-view-manager@0.0.5",
+      "extend": "npm:extend@3.0.0"
     },
     "npm:aurelia-framework@1.0.1": {
       "aurelia-binding": "npm:aurelia-binding@1.0.1",
@@ -280,25 +290,12 @@ System.config({
       "aurelia-validation": "npm:aurelia-validation@0.6.6",
       "validate.js": "npm:validate.js@0.10.0"
     },
-    "npm:aurelia-validation@0.10.1": {
-      "aurelia-binding": "npm:aurelia-binding@1.0.1",
-      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0",
-      "aurelia-metadata": "npm:aurelia-metadata@1.0.0",
-      "aurelia-task-queue": "npm:aurelia-task-queue@1.0.0",
-      "aurelia-templating": "npm:aurelia-templating@1.0.0"
-    },
     "npm:aurelia-validation@0.6.6": {
       "aurelia-binding": "npm:aurelia-binding@1.0.1",
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0",
       "aurelia-logging": "npm:aurelia-logging@1.0.0",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0",
       "aurelia-templating": "npm:aurelia-templating@1.0.0"
-    },
-    "npm:aurelia-view-manager@0.0.4": {
-      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0",
-      "aurelia-logging": "npm:aurelia-logging@1.0.0",
-      "aurelia-templating": "npm:aurelia-templating@1.0.0",
-      "extend": "npm:extend@3.0.0"
     },
     "npm:aurelia-view-manager@0.0.5": {
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0",
@@ -352,111 +349,5 @@ System.config({
     "npm:vm-browserify@0.0.4": {
       "indexof": "npm:indexof@0.0.1"
     }
-  },
-  depCache: {
-    "app.js": [
-      "aurelia-framework",
-      "aurelia-router",
-      "aurelia-authentication"
-    ],
-    "component/value-converters/date-format.js": [
-      "moment"
-    ],
-    "config/entities.js": [
-      "entity/list",
-      "entity/todo"
-    ],
-    "entity/list.js": [
-      "aurelia-orm"
-    ],
-    "entity/todo.js": [
-      "aurelia-orm"
-    ],
-    "main.js": [
-      "config/routes",
-      "config/app",
-      "config/auth",
-      "config/entities",
-      "i18next-xhr-backend",
-      "aurelia-router",
-      "aurelia-authentication",
-      "aurelia-validation/strategies/twbootstrap-view-strategy",
-      "bootstrap"
-    ],
-    "page/association-select/demo.js": [
-      "aurelia-dependency-injection",
-      "aurelia-orm"
-    ],
-    "page/auth/login.js": [
-      "aurelia-dependency-injection",
-      "aurelia-authentication",
-      "aurelia-notification"
-    ],
-    "page/auth/logout.js": [
-      "aurelia-authentication",
-      "aurelia-dependency-injection"
-    ],
-    "page/datatable/demo.js": [
-      "aurelia-dependency-injection",
-      "aurelia-orm"
-    ],
-    "page/form/demo.js": [
-      "aurelia-framework",
-      "aurelia-orm"
-    ],
-    "page/paged/demo.js": [
-      "aurelia-dependency-injection",
-      "aurelia-orm"
-    ],
-    "page/pager/demo.js": [
-      "aurelia-dependency-injection",
-      "aurelia-orm"
-    ],
-    "page/todo/create-list.js": [
-      "aurelia-dependency-injection",
-      "aurelia-orm",
-      "aurelia-router",
-      "aurelia-notification"
-    ],
-    "page/todo/list.js": [
-      "aurelia-dependency-injection",
-      "aurelia-orm",
-      "aurelia-notification"
-    ]
-  },
-  bundles: {
-    "app-build.js": [
-      "app.html!github:systemjs/plugin-text@0.0.8.js",
-      "app.js",
-      "component/core/nav-bar.html!github:systemjs/plugin-text@0.0.8.js",
-      "component/value-converters/date-format.js",
-      "config/app.js",
-      "config/auth.js",
-      "config/entities.js",
-      "config/routes.js",
-      "entity/list.js",
-      "entity/todo.js",
-      "main.js",
-      "page/association-select/demo.html!github:systemjs/plugin-text@0.0.8.js",
-      "page/association-select/demo.js",
-      "page/auth/login.html!github:systemjs/plugin-text@0.0.8.js",
-      "page/auth/login.js",
-      "page/auth/logout.html!github:systemjs/plugin-text@0.0.8.js",
-      "page/auth/logout.js",
-      "page/datatable/demo.html!github:systemjs/plugin-text@0.0.8.js",
-      "page/datatable/demo.js",
-      "page/form/demo.html!github:systemjs/plugin-text@0.0.8.js",
-      "page/form/demo.js",
-      "page/index.html!github:systemjs/plugin-text@0.0.8.js",
-      "page/index.js",
-      "page/paged/demo.html!github:systemjs/plugin-text@0.0.8.js",
-      "page/paged/demo.js",
-      "page/pager/demo.html!github:systemjs/plugin-text@0.0.8.js",
-      "page/pager/demo.js",
-      "page/todo/create-list.html!github:systemjs/plugin-text@0.0.8.js",
-      "page/todo/create-list.js",
-      "page/todo/list.html!github:systemjs/plugin-text@0.0.8.js",
-      "page/todo/list.js"
-    ]
   }
 });
