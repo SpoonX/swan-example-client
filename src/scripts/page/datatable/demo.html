@@ -3,7 +3,7 @@
 
   <datatable
     destroyed.delegate="myEventCallback($event)"
-    columns="id, todo as title, list.name as List, done as checked"
+    columns="id, todo as title, list.name as List, done as checked, createdAt as date | dateFormat:'M/D/YYYY'"
     repository.bind="todoRepository"
     search-column="todo"
     searchable

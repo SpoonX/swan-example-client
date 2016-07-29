@@ -35,6 +35,8 @@ module.exports = {
         "aurelia-polyfills",
         "aurelia-history-browser",
         "aurelia-i18n",
+        "aurelia-loader",
+        "aurelia-loader-default",
         "aurelia-logging-console",
         "aurelia-notification",
         "aurelia-orm",
@@ -49,14 +51,14 @@ module.exports = {
         "aurelia-templating-resources",
         "aurelia-templating-router",
         "aurelia-validation",
-        "aurelia-loader",
-        "aurelia-loader-default",
+        "aurelia-view-manager",
         "bootstrap",
         "bootstrap/css/bootstrap.css!text",
         "fetch",
         "get-prop",
+        "i18next-xhr-backend",
         "jquery",
-        "i18next-xhr-backend"
+        "moment"
       ],
       "options":  {
         "inject":   true,

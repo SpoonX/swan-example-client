@@ -69,7 +69,10 @@ export function configure(aurelia) {
     .plugin('aurelia-pager')
 
     /* @see https://github.com/spoonx/aurelia-form */
-    .plugin('aurelia-form');
+    .plugin('aurelia-form')
+
+    /* global resources */
+    .globalResources('component/value-converters/date-format');
 
   aurelia.use.developmentLogging();
 
