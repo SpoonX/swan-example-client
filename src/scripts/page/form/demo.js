@@ -21,8 +21,7 @@ function feedbackForm() {
     attributes: {
       placeholder: 'name'
     }
-  },
-  {
+  }, {
     key : 'feedback',
     type: 'textarea'
   }];
@@ -115,7 +114,8 @@ function petOwnerForm(bindingEngine) {
   let petsOptions = [];
 
   let calculatePetsOptions = () => {
-    petsOptions.length = 0; /* empty the array */
+    /* empty the array */
+    petsOptions.length = 0;
     petsModel.forEach(pet => {
       petsOptions.push({
         name : capitalize(pet),
@@ -140,9 +140,9 @@ function petOwnerForm(bindingEngine) {
       type   : 'select',
       options: [
         "Brand",
-        {name : 'Other'},
+        {name: 'Other'},
         {value: 'Basic'},
-        {name : 'Premium', value: 'premium'}
+        {name: 'Premium', value: 'premium'}
       ]
     },
     {
@@ -152,10 +152,10 @@ function petOwnerForm(bindingEngine) {
         name : 'Parrot',
         value: 'parrot'
 
-      },{
+      }, {
         name : 'Dog',
         value: 'dog'
-      },{
+      }, {
         name : 'Cat',
         value: 'cat'
       }]
@@ -175,7 +175,7 @@ function petOwnerForm(bindingEngine) {
 
 function loginForm() {
   let model = {
-    email   : 'spoonx@world.com',
+    email   : 'info@spoonx.nl',
     password: '',
     remember: false,
     pet     : ['dog']
