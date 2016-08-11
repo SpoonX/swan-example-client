@@ -4,20 +4,19 @@
   "description": "An example project to demonstrate several high-level components provided by SpoonX.",
   "keywords": [
     "aurelia",
-    "skeleton",
-    "navigation",
-    "webpack"
+    "todo",
+    "spoonx"
   ],
-  "homepage": "https://github.com/aurelia/skeleton-navigation#readme",
+  "homepage": "http://spoonx.nl",
   "bugs": {
-    "url": "https://github.com/aurelia/skeleton-navigation/issues"
+    "url": "https://github.com/spoonx/swan-example-client/issues"
   },
-  "license": "CC0-1.0",
-  "author": "Rob Eisenberg <rob@bluespire.com> (http://robeisenberg.com/)",
+  "license": "MIT",
+  "author": "RWOverdijk <wesley@spoonx.nl> (http://spoonx.nl/)",
   "main": "dist/main.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/aurelia/skeleton-navigation.git"
+    "url": "http://github.com/spoonx/swan-example-client#webpack"
   },
   "scripts": {
     "test": "cross-env NODE_ENV=test ./node_modules/karma/bin/karma start test/karma.conf.js",
