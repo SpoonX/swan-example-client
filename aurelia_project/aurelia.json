@@ -176,17 +176,18 @@
             ]
           },
           {
-          "name": "aurelia-orm",
-          "path": "../node_modules/aurelia-orm/dist/amd",
-          "main": "aurelia-orm",
-          "resources": [
-            "component/association-select.html",
-            "component/paged.html"
-          ]},
+            "name": "aurelia-orm",
+            "path": "../node_modules/aurelia-orm/dist/amd",
+            "main": "aurelia-orm",
+            "resources": [
+              "component/association-select.html",
+              "component/paged.html"
+            ]
+          },
           {
-          "name": "aurelia-validation",
-          "path": "../node_modules/aurelia-validation/dist/amd",
-          "main": "index"
+            "name": "aurelia-validation",
+            "path": "../node_modules/aurelia-validation/dist/amd",
+            "main": "index"
           },
           {
             "name": "validate.js",
@@ -219,7 +220,8 @@
               "component/framework/bootstrap/radios.html",
               "component/framework/bootstrap/select.html",
               "component/framework/bootstrap/submit.html",
-              "component/framework/bootstrap/textarea.html"            ]
+              "component/framework/bootstrap/textarea.html"            
+            ]
           },
           "jquery",
           {
