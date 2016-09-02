@@ -5,13 +5,13 @@ import * as entities from "config/entities";
 import Backend from "i18next-xhr-backend";
 import {Router} from "aurelia-router";
 import {AuthorizeStep} from "aurelia-authentication";
-import {TWBootstrapViewStrategy} from "aurelia-validation/strategies/twbootstrap-view-strategy";
 import "bootstrap";
 import "fetch";
 
 export function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
+    .plugin('aurelia-validation')
 
     /* @see http://aurelia-api.spoonx.org/configuration.html */
     .plugin('aurelia-api', builder => {

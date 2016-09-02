@@ -28,6 +28,7 @@ module.exports = {
         "aurelia-form",
         "[aurelia-form/**/*.js]",
         "aurelia-form/**/*.html!text",
+        "aurelia-form-renderer-bootstrap",
         "aurelia-framework",
         "aurelia-bootstrapper",
         "aurelia-fetch-client",
