@@ -35,9 +35,19 @@
     </div>
 
     <div class="col-xs-4">
-      <h3 t="todo">Todo</h3>
+      <h3 t="todo"></h3>
       <entity-form entity.bind="entity"></entity-form>
     </div>
+
+    <div class="col-xs-4">
+      <h3 t="lists"></h3>
+      <schema-form
+        schema.bind="todoForm.schema"
+        model.bind="todoForm.model">
+      </schema-form>
+    </div>
+
+
 
   </section>
 
