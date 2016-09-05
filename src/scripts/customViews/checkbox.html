@@ -1,0 +1,18 @@
+<template>
+  <require from="./form-group"></require>
+  <require from="./attributes"></require>
+  <h4 class="text-danger">Custom checkbox</h4>
+  <form-group element.bind="element" message.bind="message">
+    <div class="checkbox">
+      <label>
+        <input
+          attributes.bind="element.attributes"
+          type="checkbox"
+          t.bind="label"
+          name.bind="element.key"
+          checked.bind="element.value">
+          ${label}
+      </label>
+    </div>
+  </form-group>
+</template>

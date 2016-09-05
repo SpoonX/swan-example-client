@@ -71,6 +71,19 @@ export function configure(aurelia) {
     /* @see https://github.com/spoonx/aurelia-form */
     .plugin('aurelia-form')
 
+    /* @see https://github.com/spoonx/aurelia-datatable */
+    .plugin('aurelia-view-manager', config => {
+      config.configure({
+        'spoonx/datatable': {
+          location: 'customViews/datatable.html'
+        },
+        'spoonx/form': {
+            map: {
+              checkboxes: 'customViews/checkbox.html'
+          }}
+      })
+    })
+
     /* global resources */
     .globalResources('component/value-converters/date-format');
 
