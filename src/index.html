@@ -31,8 +31,14 @@
   System.import('jquery').then(function(jq) {
     window.$ = jq;
     window.jQuery = jq;
-
-    System.import('aurelia-bootstrapper');
+    return SystemJS.import('raf')
+  }).then(function(raf) {
+    raf.polyfill();
+    return SystemJS.import('aurelia-polyfills');
+  }).then(function() {
+    return SystemJS.import('webcomponents/webcomponentsjs/MutationObserver');
+  }).then(function() {
+    SystemJS.import('aurelia-bootstrapper');
   });
 </script>
 </body>
