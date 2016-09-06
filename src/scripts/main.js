@@ -7,6 +7,7 @@ import {Router} from "aurelia-router";
 import {AuthorizeStep} from "aurelia-authentication";
 import {TWBootstrapViewStrategy} from "aurelia-validation/strategies/twbootstrap-view-strategy";
 import "bootstrap";
+import "fetch";
 
 export function configure(aurelia) {
   aurelia.use
