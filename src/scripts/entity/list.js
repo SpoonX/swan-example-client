@@ -6,7 +6,6 @@ import {observable} from 'aurelia-binding';
 export class ListEntity extends Entity {
   name = null;
 
-  @observable()
   @association({collection: 'todo'})
   todos = [];
 

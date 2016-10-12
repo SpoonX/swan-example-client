@@ -12,6 +12,7 @@ System.config({
     "aurelia-authentication": "npm:aurelia-authentication@3.0.0",
     "aurelia-binding": "npm:aurelia-binding@1.0.9",
     "aurelia-bootstrapper": "npm:aurelia-bootstrapper@1.0.0",
+    "aurelia-config": "npm:aurelia-config@0.1.0",
     "aurelia-datatable": "npm:aurelia-datatable@0.1.1",
     "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.1.0",
     "aurelia-fetch-client": "npm:aurelia-fetch-client@1.0.1",
@@ -119,6 +120,13 @@ System.config({
       "aurelia-templating-binding": "npm:aurelia-templating-binding@1.0.0",
       "aurelia-templating-resources": "npm:aurelia-templating-resources@1.1.1",
       "aurelia-templating-router": "npm:aurelia-templating-router@1.0.0"
+    },
+    "npm:aurelia-config@0.1.0": {
+      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.1.0",
+      "aurelia-framework": "npm:aurelia-framework@1.0.6",
+      "aurelia-loader": "npm:aurelia-loader@1.0.0",
+      "aurelia-logging": "npm:aurelia-logging@1.0.0",
+      "homefront": "npm:homefront@1.2.3"
     },
     "npm:aurelia-datatable@0.1.1": {
       "aurelia-binding": "npm:aurelia-binding@1.0.9",
@@ -312,7 +320,7 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:font-awesome@4.6.3": {
-      "css": "github:systemjs/plugin-css@0.1.30"
+      "css": "github:systemjs/plugin-css@0.1.31"
     },
     "npm:homefront@1.2.3": {
       "extend": "npm:extend@3.0.0"
