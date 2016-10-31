@@ -31,6 +31,13 @@ module.exports = {
         "aurelia-form-renderer-bootstrap",
         "aurelia-framework",
         "aurelia-bootstrapper",
+        "aurelia-charts",
+        "[aurelia-charts/**/*.js]",
+        "aurelia-charts/**/*.html!text",
+        "aurelia-charts-c3",
+        "[aurelia-charts-c3/**/*.js]",
+        "aurelia-charts-c3/**/*.html!text",
+        "aurelia-config",
         "aurelia-fetch-client",
         "aurelia-polyfills",
         "aurelia-history-browser",
@@ -63,7 +70,9 @@ module.exports = {
         "get-prop",
         "jquery",
         "moment",
-        "text"
+        "raf",
+        "text",
+        "webcomponents/webcomponentsjs/MutationObserver"
       ],
       "options":  {
         "inject":   true,
