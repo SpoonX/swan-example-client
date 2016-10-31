@@ -15,28 +15,15 @@ export function configure(aurelia) {
 
     /* @see https://github.com/spoonx/aurelia-config */
     .plugin('aurelia-config', configure => configure([
-        {moduleId: 'aurelia-api'},
-        {moduleId: 'aurelia-authentication'},
-        {moduleId: 'aurelia-notification'},
-        {moduleId: 'aurelia-form'},
-        {moduleId: 'aurelia-datatable'},
-        {moduleId: 'aurelia-pager'}],
+        'aurelia-api',
+        'aurelia-authentication',
+        'aurelia-notification',
+        'aurelia-form',
+        'aurelia-datatable',
+        'aurelia-pager',
+        'aurelia-charts-c3'],
         appConfig,
         authConfig))
-    .plugin('aurelia-form')
-
-    /* @see http://aurelia-charts.spoonx.org/configuration.html */
-    .plugin('aurelia-charts-c3')
-
-    /* @see http://aurelia-charts.spoonx.org/configuration.html */
-    .plugin('aurelia-charts', chart => {
-      chart.configure({
-        defaults: {
-          library: 'C3'
-        }
-      });
-    })
-
 
     /* @see http://aurelia-orm.spoonx.org/configuration.html */
     .plugin('aurelia-orm', builder => {
@@ -60,19 +47,6 @@ export function configure(aurelia) {
       });
     })
 
-
-    /* @see https://github.com/spoonx/aurelia-datatable */
-    .plugin('aurelia-view-manager', config => {
-      config.configure({
-        'spoonx/datatable': {
-          location: 'customViews/datatable.html'
-        },
-        'spoonx/form': {
-            map: {
-              checkboxes: 'customViews/checkbox.html'
-          }}
-      })
-    })
     /* global resources */
     .globalResources('component/value-converters/date-format');
 

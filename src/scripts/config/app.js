@@ -28,8 +28,27 @@ export default {
   'aurelia-notification': {
     notifications: {
       success: 'humane-jackedup-success',
-      error   : 'humane-jackedup-error',
+      error  : 'humane-jackedup-error',
       info   : 'humane-jackedup-info'
     }
+  },
+
+  /* @see https://github.com/spoonx/aurelia-view-manager */
+  'aurelia-view-manager': {
+    'spoonx/datatable': {
+      location: 'customViews/datatable.html'
+    },
+    'spoonx/form': {
+      map: {
+        checkboxes: 'customViews/checkbox.html'
+      }
+    }
+  },
+
+  /* @see http://aurelia-charts.spoonx.org/configuration.html */
+  'aurelia-charts': {
+    defaults: {
+      library: 'C3'
+    }
   }
-}
+};
