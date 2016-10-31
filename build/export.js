@@ -9,6 +9,11 @@ module.exports = {
   // path.
   'normalize': [
     [
+      // include c3.css
+      'c3', [
+        '/c3.min.css'
+      ]
+    ], [
       // include font-awesome.css and its fonts files
       'font-awesome', [
         '/css/font-awesome.min.css',
@@ -20,6 +25,7 @@ module.exports = {
         '/fonts/*'
       ]
     ], [
+      // include bluebird polyfills
       'bluebird', [
         '/js/browser/bluebird.min.js'
       ]
