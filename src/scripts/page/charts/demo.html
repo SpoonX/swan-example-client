@@ -1,0 +1,22 @@
+<template>
+
+  <section class="row">
+
+    <dimensions-picker
+      dimensions.bind="dimensions"
+      object.bind="object"
+    ></dimensions-picker>
+
+    <chart-picker
+      dimensions.bind="dimensions"
+      chart.bind="chart"
+    ></chart-picker>
+
+    <chart-element
+      chart.bind="chart"
+      dimensions.bind="dimensions"
+      data.bind="data"
+    ></chart-element>
+
+  </section>
+</template>
