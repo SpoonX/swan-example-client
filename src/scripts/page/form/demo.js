@@ -10,6 +10,15 @@ export class Demo {
     this.loginForm    = loginForm();
     this.productForm  = productForm();
     this.feedbackForm = feedbackForm();
+
+    this.todoForm     = {
+      schema: [],
+      model : {lists: []}
+    };
+
+    entityManager.getRepository('list').find().then(lists => {
+      this.todoForm = todoForm(lists);
+    });
   }
 
 }
@@ -195,6 +204,45 @@ function loginForm() {
       type: 'boolean'
     },
   ];
+
+  return {model, schema};
+}
+
+  /**
+   * an example that uses entities and a custom schema
+   */
+function todoForm(lists) {
+
+  let model = {lists};
+
+  let schema = [{
+    key   : 'lists',
+    type  : 'collection',
+    schema: [{
+      key : 'todos',
+      type: 'collection',
+      schema: [{
+        key : 'todo',
+      }, {
+        type : 'boolean',
+        label: false,
+        key  : 'done'
+      }, {
+        type    : 'association',
+        label   : false,
+        resource: 'list',
+        key     : 'list'
+      }, {
+        type   : 'actions',
+        actions: [{
+          label : 'save',
+          action: (entity => {
+            entity.save();
+          })
+        }]
+      }]
+    }]
+  }];
 
   return {model, schema};
 }
