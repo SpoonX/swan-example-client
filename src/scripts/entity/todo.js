@@ -8,7 +8,6 @@ export class TodoEntity extends Entity {
   @type('string')
   todo = '';
 
-  @observable()
   @type('boolean')
   done = false;
 
