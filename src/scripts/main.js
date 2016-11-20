@@ -1,10 +1,12 @@
 import routes from "config/routes";
 import appConfig from "config/app";
 import authConfig from "config/auth";
+import localConfig from "config/local";
 import * as entities from "config/entities";
 import Backend from "i18next-xhr-backend";
 import {Router} from "aurelia-router";
 import {AuthorizeStep} from "aurelia-authentication";
+import {Config} from 'aurelia-config';
 import "bootstrap";
 import "fetch";
 
@@ -14,16 +16,20 @@ export function configure(aurelia) {
     .plugin('aurelia-validation')
 
     /* @see https://github.com/spoonx/aurelia-config */
-    .plugin('aurelia-config', configure => configure([
+    .plugin('aurelia-config', configure => configure(
+      [
         'aurelia-api',
         'aurelia-authentication',
         'aurelia-notification',
         'aurelia-form',
         'aurelia-datatable',
         'aurelia-pager',
-        'aurelia-charts-c3'],
-        appConfig,
-        authConfig))
+        'aurelia-charts-c3'
+      ],
+      appConfig,
+      authConfig,
+      localConfig
+    ))
 
     /* @see http://aurelia-orm.spoonx.org/configuration.html */
     .plugin('aurelia-orm', builder => {
@@ -50,7 +56,11 @@ export function configure(aurelia) {
     /* global resources */
     .globalResources('component/value-converters/date-format');
 
-  aurelia.use.developmentLogging();
+  let mergedConfig = aurelia.container.get(Config);
+
+  if (mergedConfig.fetch('environment') === 'development') {
+    aurelia.use.developmentLogging();
+  }
 
   aurelia.start().then(a => {
     a.container.get(Router).configure(configureRouter);
@@ -59,7 +69,7 @@ export function configure(aurelia) {
 }
 
 function configureRouter(config) {
-  config.title = appConfig.title;
+  config.title = appConfig.app.title;
 
   config.addPipelineStep('authorize', AuthorizeStep);
 
