@@ -4,9 +4,9 @@ import {Notification} from "aurelia-notification";
 
 @inject(AuthService, Notification)
 export class Login {
-  username = '';
+  username = 'example';
 
-  password = '';
+  password = 'example';
 
   constructor(authService, notification) {
     this.notification = notification;
