@@ -47,7 +47,7 @@ export function configure(aurelia) {
         },
         lng        : language || appConfig.defaultLocale.language,
         attributes : ['t'],
-        fallbackLng: appConfig.defaultLocale.language,
+        fallbackLng: language || appConfig.defaultLocale.language,
         debug      : false
       });
     })
