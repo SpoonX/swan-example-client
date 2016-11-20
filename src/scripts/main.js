@@ -16,6 +16,7 @@ export function configure(aurelia) {
     .plugin('aurelia-validation')
 
     /* @see https://github.com/spoonx/aurelia-config */
+    // eslint-disable-next-line no-shadow
     .plugin('aurelia-config', configure => {
       return configure([
         'aurelia-api',
@@ -47,7 +48,7 @@ export function configure(aurelia) {
         },
         lng        : language || appConfig.defaultLocale.language,
         attributes : ['t'],
-        fallbackLng: language || appConfig.defaultLocale.language,
+        fallbackLng: appConfig.defaultLocale.language,
         debug      : false
       });
     })
