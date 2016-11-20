@@ -1,8 +1,10 @@
+var fs              = require('fs');
 var gulp            = require('gulp');
 var runSequence     = require('run-sequence');
 var changed         = require('gulp-changed');
 var plumber         = require('gulp-plumber');
 var to5             = require('gulp-babel');
+var BuildConfig     = require('../BuildConfig');
 var sourcemaps      = require('gulp-sourcemaps');
 var paths           = require('../paths');
 var compilerOptions = require('../babel-options');
@@ -40,6 +42,40 @@ gulp.task('build-less', function() {
     .pipe(gulp.dest(outputStyles));
 });
 
+gulp.task('copy-local', function(callback) {
+  let deployedPath = paths.scriptRoot + 'config/deployed.js';
+  let deployedTmp  = outputScripts + 'config/deployed.js';
+
+  if (!process.env.CONTEXT) {
+    fs.unlinkSync(deployedTmp);
+
+    return callback();
+  }
+
+  var deployConfig = fs.readFileSync(paths.scriptRoot + 'config/deployed.js', 'utf8');
+  var tmpLocal     = outputScripts + 'config/local.js';
+  var buildConfig  = new BuildConfig;
+
+  if (fs.existsSync(tmpLocal)) {
+    fs.unlinkSync(tmpLocal);
+  }
+
+  buildConfig.getEndpoint(process.env.CONTEXT, process.env.HEAD).then(endpoint => {
+    var environment = process.env.CONTEXT === 'production' ? 'production' : 'staging';
+    deployConfig    = deployConfig.replace('{{environment}}', environment).replace(/\{\{apiUrl}}/g, endpoint);
+
+    fs.writeFile(tmpLocal, deployConfig, error => {
+      fs.unlinkSync(deployedTmp);
+
+      if (error) {
+        return callback(error);
+      }
+
+      callback();
+    });
+  }).catch(callback);
+});
+
 // this task calls the clean task (located
 // in ./clean.js), then runs the build-system
 // and build-html tasks in parallel
@@ -63,6 +99,7 @@ gulp.task('build-dist', function(callback) {
   return runSequence(
     ['clean-tmp', 'clean-dist'],
     ['build-system', 'build-html', 'build-less'],
+    'copy-local',
     callback
   );
 });
