@@ -1,5 +1,8 @@
 export default {
-  title: 'My SpoonX application',
+  app: {
+    title      : 'My SpoonX application',
+    environment: 'development',
+  },
 
   /* @see http://aurelia-api.spoonx.org/configuration.html */
   'aurelia-api': {
