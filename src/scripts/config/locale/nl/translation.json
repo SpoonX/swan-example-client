@@ -27,6 +27,8 @@
     "owner": "Huisdier eigenaar"
   },
   "remember": "Onthoud",
+  "No rights reserved": "Geen rechten voorbehouden",
+  "Change language": "Taal wijzigen",
   "feedback": "Terugkoppeling",
   "name"    : "Naam",
   "password": "Wachtwoord",
@@ -36,6 +38,7 @@
   "tags"    : "Labels",
   "tag"     : "Label",
   "email"   : "E-mail",
+  "Login"   : "Inloggen",
   "color"   : "Kleur",
   "remove"  : "Verwijderen",
   "add"     : "Toeveoegen",
