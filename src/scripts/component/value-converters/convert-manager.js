@@ -49,6 +49,7 @@ export class ConvertManagerValueConverter {
     if (!str) {
       return null;
     }
+
     return str;
 
     /*if (typer.detect(str) === 'string' && str[0] !== '{') {

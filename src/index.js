@@ -17,7 +17,7 @@ app.on('window-all-closed', () => {
 
 app.on('ready', () => {
   mainWindow = new BrowserWindow({
-    width: 800,
+    width : 800,
     height: 600
   });
 
@@ -25,7 +25,7 @@ app.on('ready', () => {
   mainWindow.webContents.on('did-finish-load', () => {
     mainWindow.setTitle(app.getName());
   });
-  
+
   mainWindow.on('closed', () => {
     mainWindow = null;
   });

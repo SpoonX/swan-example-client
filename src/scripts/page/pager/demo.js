@@ -8,7 +8,7 @@ export class Demo {
 
     let data = [];
 
-    for (let i = 0; i < 500; i++) {
+    for (let i = 0; i < 500; i += 1) {
       data.push({
         id: i
       });

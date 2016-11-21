@@ -26,9 +26,10 @@ export class CreateList {
             this.router.navigate('lists');
         })
       }
-      throw v[0]; 
-    }).catch(err => {
+      throw v[0];
+    })
+    .catch(() => {
       // error is displayed on the form using FormRendererBootstrap
-    });    
+    });
   }
 }

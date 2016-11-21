@@ -1,4 +1,3 @@
-import {inject} from 'aurelia-framework';
 import {groupBy, unpackAllGrouped} from 'aurelia-charts';
 import {fakeData} from './data';
 
@@ -12,8 +11,4 @@ export class Demo {
     this.object     = fakeData[0];
   }
 
-}
-
-function take(n, data) {
-  return data.splice(0, n);
 }

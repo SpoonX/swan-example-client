@@ -6,7 +6,7 @@ export default {
 
   /* @see http://aurelia-api.spoonx.org/configuration.html */
   'aurelia-api': {
-    endpoints    : [
+    endpoints: [
       {
         name    : 'api',                    // The name by which you reference this endpoint
         endpoint: 'http://127.0.0.1:1337/', // The URL for this endpoint (defaults to current url)

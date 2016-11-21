@@ -16,10 +16,10 @@ export default [
     title   : 'Login'
   },
   {
-    route: 'logout',
-    name: 'logout',
+    route   : 'logout',
+    name    : 'logout',
     moduleId: 'page/auth/logout',
-    title: 'Logout'
+    title   : 'Logout'
   },
   {
     route   : '/lists',
