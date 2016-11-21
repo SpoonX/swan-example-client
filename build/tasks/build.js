@@ -43,8 +43,8 @@ gulp.task('build-less', function() {
 });
 
 gulp.task('copy-local', function(callback) {
-  let deployedPath = paths.scriptRoot + 'config/deployed.js';
-  let deployedTmp  = outputScripts + 'config/deployed.js';
+  var deployedPath = paths.scriptRoot + 'config/deployed.js';
+  var deployedTmp  = outputScripts + 'config/deployed.js';
 
   if (!process.env.CONTEXT) {
     fs.unlinkSync(deployedTmp);
