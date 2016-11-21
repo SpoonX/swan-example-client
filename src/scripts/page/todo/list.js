@@ -2,14 +2,16 @@ import {inject, NewInstance} from 'aurelia-dependency-injection';
 import {EntityManager} from 'aurelia-orm';
 import {Notification} from 'aurelia-notification';
 import {ValidationController} from 'aurelia-validation';
+import {I18N} from 'aurelia-i18n';
 
-@inject(EntityManager, Notification, NewInstance.of(ValidationController))
+@inject(EntityManager, Notification, NewInstance.of(ValidationController), I18N)
 export class List {
-  constructor(entityManager, notification, controller) {
+  constructor(entityManager, notification, controller, i18n) {
     this.notification   = notification;
     this.listRepository = entityManager.getRepository('list');
     this.entityManager  = entityManager;
     this.controller     = controller;
+    this.i18n           = i18n;
   }
 
   attached() {
@@ -57,7 +59,7 @@ export class List {
   addTodo(list) {
     let todo  = this.entityManager.getEntity('todo');
 
-    todo.todo = prompt('What is it you need to do?'); // eslint-disable-line no-alert
+    todo.todo = prompt(this.i18n.tr('What is it you need to do?')); // eslint-disable-line no-alert
 
     todo.validate()
       .then(v => {
@@ -79,7 +81,7 @@ export class List {
         throw v[0];
       })
       .catch(err => {
-        this.notification.error('Something went wrong! - ' + err.message);
+        this.notification.error(err.message);
       });
   }
 

@@ -23,8 +23,8 @@ export default {
 
   /* i18n */
   defaultLocale: {
-    language: 'nl',   // Used for translations from i18n.
-    locale  : 'nl-NL' // Used by validator. e.g. nl-NL
+    language: 'en',   // Used for translations from i18n.
+    locale  : 'en-US' // Used by validator. e.g. nl-NL
   },
 
   /* @see https://github.com/SpoonX/aurelia-notification */

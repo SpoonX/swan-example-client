@@ -13,12 +13,13 @@ import 'fetch';
 export function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
+
     .plugin('aurelia-validation')
 
     /* @see https://github.com/spoonx/aurelia-config */
     // eslint-disable-next-line no-shadow
-    .plugin('aurelia-config', configure => configure(
-      [
+    .plugin('aurelia-config', configure => {
+      return configure([
         'aurelia-api',
         'aurelia-authentication',
         'aurelia-notification',
@@ -26,11 +27,8 @@ export function configure(aurelia) {
         'aurelia-datatable',
         'aurelia-pager',
         'aurelia-charts-c3'
-      ],
-      appConfig,
-      authConfig,
-      localConfig
-    ))
+      ], appConfig, authConfig, localConfig);
+    })
 
     /* @see http://aurelia-orm.spoonx.org/configuration.html */
     .plugin('aurelia-orm', builder => {
@@ -43,13 +41,15 @@ export function configure(aurelia) {
 
       instance.i18next.use(Backend);
 
-      instance.setup({
+      let language = localStorage.getItem('language');
+
+      return instance.setup({
         backend: {
           loadPath: 'scripts/config/locale/{{lng}}/{{ns}}.json'
         },
-        lng        : appConfig.defaultLocale.language,
+        lng        : language || appConfig.defaultLocale.language,
         attributes : ['t'],
-        fallbackLng: appConfig.defaultLocale.language,
+        fallbackLng: language || appConfig.defaultLocale.language,
         debug      : false
       });
     })

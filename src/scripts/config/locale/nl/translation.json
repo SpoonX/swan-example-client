@@ -27,6 +27,8 @@
     "owner": "Huisdier eigenaar"
   },
   "remember": "Onthoud",
+  "No rights reserved": "Geen rechten voorbehouden",
+  "Change language": "Taal wijzigen",
   "feedback": "Terugkoppeling",
   "name"    : "Naam",
   "password": "Wachtwoord",
@@ -36,6 +38,7 @@
   "tags"    : "Labels",
   "tag"     : "Label",
   "email"   : "E-mail",
+  "Login"   : "Inloggen",
   "color"   : "Kleur",
   "remove"  : "Verwijderen",
   "add"     : "Toeveoegen",
@@ -43,5 +46,9 @@
   "product" : "Artikel",
   "message" : "Boodschap",
   "todo"    : "Taak",
-  "done"    : "Gedaan"
+  "done"    : "Gedaan",
+  "Add todo": "Taak toevoegen",
+  "What is it you need to do?": "Hoe is het je moet doen?", 
+  "Database error": "Databank fout",
+  "Yeah, that didn't work!": "Ja, dat werkte niet!"
 }

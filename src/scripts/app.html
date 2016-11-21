@@ -12,4 +12,17 @@
       </div>
     </div>
   </div>
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted pull-left">
+        SpoonX &copy; <span t="No rights reserved"></span>.
+      </p>
+      <p class="text-muted pull-right">
+        <strong t="Change language"></strong>:
+        <span repeat.for="language of languages">
+          <img class="language" click.trigger="setLanguage(language)" src.bind="'https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.7.0/flags/1x1/'+language.flag+'.svg'">
+        </span>
+      </p>
+    </div>
+  </footer>
 </template>
