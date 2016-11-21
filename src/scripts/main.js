@@ -1,14 +1,14 @@
-import routes from "config/routes";
-import appConfig from "config/app";
-import authConfig from "config/auth";
-import localConfig from "config/local";
-import * as entities from "config/entities";
-import Backend from "i18next-xhr-backend";
-import {Router} from "aurelia-router";
-import {AuthorizeStep} from "aurelia-authentication";
+import routes from 'config/routes';
+import appConfig from 'config/app';
+import authConfig from 'config/auth';
+import localConfig from 'config/local';
+import * as entities from 'config/entities';
+import Backend from 'i18next-xhr-backend';
+import {Router} from 'aurelia-router';
+import {AuthorizeStep} from 'aurelia-authentication';
 import {Config} from 'aurelia-config';
-import "bootstrap";
-import "fetch";
+import 'bootstrap';
+import 'fetch';
 
 export function configure(aurelia) {
   aurelia.use
@@ -16,6 +16,7 @@ export function configure(aurelia) {
     .plugin('aurelia-validation')
 
     /* @see https://github.com/spoonx/aurelia-config */
+    // eslint-disable-next-line no-shadow
     .plugin('aurelia-config', configure => configure(
       [
         'aurelia-api',
@@ -43,7 +44,7 @@ export function configure(aurelia) {
       instance.i18next.use(Backend);
 
       instance.setup({
-        backend:     {
+        backend: {
           loadPath: 'scripts/config/locale/{{lng}}/{{ns}}.json'
         },
         lng        : appConfig.defaultLocale.language,

@@ -13,7 +13,7 @@ export class Demo {
     },
     disabled: record => {
       // disable button if the ID is an even number
-      return record.id % 2 == 0;
+      return record.id % 2 === 0;
     }
   }];
 

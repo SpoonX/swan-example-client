@@ -1,6 +1,6 @@
-import {inject, NewInstance} from "aurelia-dependency-injection";
-import {EntityManager} from "aurelia-orm";
-import {Notification} from "aurelia-notification";
+import {inject, NewInstance} from 'aurelia-dependency-injection';
+import {EntityManager} from 'aurelia-orm';
+import {Notification} from 'aurelia-notification';
 import {ValidationController} from 'aurelia-validation';
 
 @inject(EntityManager, Notification, NewInstance.of(ValidationController))
@@ -14,7 +14,9 @@ export class List {
 
   attached() {
     return this.listRepository.find()
-      .then(lists => this.lists = lists);
+      .then(lists => {
+        this.lists = lists;
+      });
   }
 
   destroy(index) {
@@ -54,7 +56,8 @@ export class List {
 
   addTodo(list) {
     let todo  = this.entityManager.getEntity('todo');
-    todo.todo = prompt('What is it you need to do?');
+
+    todo.todo = prompt('What is it you need to do?'); // eslint-disable-line no-alert
 
     todo.validate()
       .then(v => {
@@ -65,16 +68,19 @@ export class List {
             .then(() => {
               this.notification.success('Todo created successfully!');
 
-            }).catch(err => {
+            })
+            .catch(err => {
               list.todos.pop();
 
               throw err;
             });
         }
-        throw v[0]; 
-      }).catch(err => {
+
+        throw v[0];
+      })
+      .catch(err => {
         this.notification.error('Something went wrong! - ' + err.message);
-      });    
+      });
   }
 
   updated(todo) {
