@@ -133,7 +133,7 @@ System.config({
     "npm:aurelia-charts@0.1.1": {
       "array-equal": "npm:array-equal@1.0.0",
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.2.0",
-      "aurelia-form": "npm:aurelia-form@0.1.12",
+      "aurelia-form": "npm:aurelia-form@0.3.0",
       "aurelia-framework": "npm:aurelia-framework@1.0.7",
       "aurelia-logging": "npm:aurelia-logging@1.1.0",
       "extend": "npm:extend@3.0.0",
@@ -166,17 +166,17 @@ System.config({
       "aurelia-logging": "npm:aurelia-logging@1.1.0"
     },
     "npm:aurelia-filter@0.0.6": {
-      "aurelia-form": "npm:aurelia-form@0.1.12",
+      "aurelia-form": "npm:aurelia-form@0.3.0",
       "aurelia-framework": "npm:aurelia-framework@1.0.7",
-      "aurelia-view-manager": "npm:aurelia-view-manager@0.0.7",
+      "aurelia-view-manager": "npm:aurelia-view-manager@0.1.0",
       "extend": "npm:extend@3.0.0"
     },
     "npm:aurelia-form@0.1.12": {
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.2.0",
       "aurelia-framework": "npm:aurelia-framework@1.0.7",
       "aurelia-logging": "npm:aurelia-logging@1.1.0",
-      "aurelia-validatejs": "npm:aurelia-validatejs@0.6.0",
-      "aurelia-view-manager": "npm:aurelia-view-manager@0.0.7",
+      "aurelia-validatejs": "npm:aurelia-validatejs@0.7.0",
+      "aurelia-view-manager": "npm:aurelia-view-manager@0.1.0",
       "extend": "npm:extend@3.0.0"
     },
     "npm:aurelia-form@0.3.0": {
@@ -309,12 +309,12 @@ System.config({
     },
     "npm:aurelia-validatejs@0.6.0": {
       "aurelia-metadata": "npm:aurelia-metadata@1.0.2",
-      "aurelia-validation": "npm:aurelia-validation@0.10.1",
+      "aurelia-validation": "npm:aurelia-validation@0.13.1",
       "validate.js": "npm:validate.js@0.10.0"
     },
     "npm:aurelia-validatejs@0.7.0": {
       "aurelia-metadata": "npm:aurelia-metadata@1.0.2",
-      "aurelia-validation": "npm:aurelia-validation@0.11.0",
+      "aurelia-validation": "npm:aurelia-validation@0.13.1",
       "validate.js": "npm:validate.js@0.10.0"
     },
     "npm:aurelia-validation@0.10.1": {
