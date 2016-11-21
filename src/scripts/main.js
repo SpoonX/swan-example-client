@@ -13,6 +13,26 @@ import 'fetch';
 export function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
+
+    /* @see https://github.com/aurelia/i18n */
+    .plugin('aurelia-i18n', instance => {
+      // adapt options to your needs (see http://i18next.com/pages/doc_init.html)
+
+      instance.i18next.use(Backend);
+
+      let language = localStorage.getItem('language');
+
+      instance.setup({
+        backend: {
+          loadPath: 'scripts/config/locale/{{lng}}/{{ns}}.json'
+        },
+        lng        : language || appConfig.defaultLocale.language,
+        attributes : ['t'],
+        fallbackLng: language || appConfig.defaultLocale.language,
+        debug      : false
+      });
+    })
+    
     .plugin('aurelia-validation')
 
     /* @see https://github.com/spoonx/aurelia-config */
@@ -34,24 +54,6 @@ export function configure(aurelia) {
       builder.registerEntities(entities);
     })
 
-    /* @see https://github.com/aurelia/i18n */
-    .plugin('aurelia-i18n', instance => {
-      // adapt options to your needs (see http://i18next.com/pages/doc_init.html)
-
-      instance.i18next.use(Backend);
-
-      let language = localStorage.getItem('language');
-
-      instance.setup({
-        backend: {
-          loadPath: 'scripts/config/locale/{{lng}}/{{ns}}.json'
-        },
-        lng        : language || appConfig.defaultLocale.language,
-        attributes : ['t'],
-        fallbackLng: appConfig.defaultLocale.language,
-        debug      : false
-      });
-    })
 
     /* global resources */
     .globalResources('component/value-converters/date-format');

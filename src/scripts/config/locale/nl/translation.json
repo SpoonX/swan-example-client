@@ -46,5 +46,9 @@
   "product" : "Artikel",
   "message" : "Boodschap",
   "todo"    : "Taak",
-  "done"    : "Gedaan"
+  "done"    : "Gedaan",
+  "Add todo": "Taak toevoegen",
+  "What is it you need to do?": "Hoe is het je moet doen?", 
+  "Database error": "Databank fout",
+  "Yeah, that didn't work!": "Ja, dat werkte niet!"
 }
