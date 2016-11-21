@@ -4,7 +4,7 @@ import {observable} from 'aurelia-binding';
 
 @validatedResource('todo')
 export class TodoEntity extends Entity {
-  @observable()
+
   @type('string')
   todo = '';
 

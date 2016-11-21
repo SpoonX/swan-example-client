@@ -59,12 +59,17 @@ export class List {
     todo.validate()
       .then(v => {
         if (v.length === 0) {
+          list.todos.push(todo);
+
           return list.save()
             .then(() => {
               this.notification.success('Todo created successfully!');
 
-              list.todos.push(todo);
-            })
+            }).catch(err => {
+              list.todos.pop();
+
+              throw err;
+            });
         }
         throw v[0]; 
       }).catch(err => {
