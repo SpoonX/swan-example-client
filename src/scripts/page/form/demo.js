@@ -16,9 +16,10 @@ export class Demo {
       model : {lists: []}
     };
 
-    entityManager.getRepository('list').find().then(lists => {
-      this.todoForm = todoForm(lists);
-    });
+    entityManager.getRepository('list').find()
+      .then(lists => {
+        this.todoForm = todoForm(lists);
+      });
   }
 
 }
@@ -219,10 +220,10 @@ function todoForm(lists) {
     key   : 'lists',
     type  : 'collection',
     schema: [{
-      key : 'todos',
-      type: 'collection',
+      key   : 'todos',
+      type  : 'collection',
       schema: [{
-        key : 'todo',
+        key: 'todo',
       }, {
         type : 'boolean',
         label: false,
