@@ -65,7 +65,7 @@
     "object.assign": "^4.0.4",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.2.2",
-    "spoonx-tools": "^1.0.0-0",
+    "spoonx-tools": "^1.1.1",
     "vinyl-paths": "^2.1.0",
     "yargs": "^6.0.0"
   },
