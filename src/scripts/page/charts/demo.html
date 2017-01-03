@@ -1,21 +1,27 @@
 <template>
+  <require from="c3/c3.min.css"></require>
 
   <section class="row">
 
-    <dimensions-picker
-      dimensions.bind="dimensions"
-      object.bind="object"
-    ></dimensions-picker>
-
-    <chart-picker
-      dimensions.bind="dimensions"
-      chart.bind="chart"
-    ></chart-picker>
+    <chart-element
+      data.bind="barChart.data"
+      type.bind="barChart.type"
+      library.bind="barChart.library"
+      dimensions.bind="barChart.dimensions"
+    ></chart-element>
 
     <chart-element
-      chart.bind="chart"
-      dimensions.bind="dimensions"
-      data.bind="data"
+      data.bind="lineChart.data"
+      type.bind="lineChart.type"
+      library.bind="lineChart.library"
+      dimensions.bind="lineChart.dimensions"
+    ></chart-element>
+
+    <chart-element
+      data.bind="pieChart.data"
+      type.bind="pieChart.type"
+      library.bind="pieChart.library"
+      dimensions.bind="pieChart.dimensions"
     ></chart-element>
 
   </section>

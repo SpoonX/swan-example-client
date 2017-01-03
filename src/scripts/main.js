@@ -26,9 +26,16 @@ export function configure(aurelia) {
         'aurelia-form',
         'aurelia-datatable',
         'aurelia-pager',
-        'aurelia-charts-c3'
       ], appConfig, authConfig, localConfig);
     })
+
+    .plugin('aurelia-charts', charts => {
+      charts.configure({
+        library: 'C3',
+      });
+    })
+
+    .plugin('aurelia-charts-c3')
 
     /* @see http://aurelia-orm.spoonx.org/configuration.html */
     .plugin('aurelia-orm', builder => {
