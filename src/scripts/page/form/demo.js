@@ -59,8 +59,20 @@ function productForm() {
     ]
   };
 
-  let removeTag = (tag, index, $event) => {
+  let removeButton = {
+      label     : 'remove tag',
+      action    : ($event) => {removeTag(model.tags.length - 1, $event);},
+  attributes: {
+  class: 'btn btn-warning'
+  }
+};
+
+  let removeTag = (index, $event) => {
     model.tags.splice(index, 1);
+
+    if (!model.tags.length) {
+      return schema[2].actions.splice(1, 1);
+    }
   };
 
   let addTag = (tag, index, $event) => {
@@ -68,6 +80,10 @@ function productForm() {
       name : '',
       color: '#ffffff'
     });
+
+    if (schema[2].actions.length === 1) {
+      schema[2].actions.push(removeButton);
+    }
   };
 
   let tagSchema = [
@@ -81,16 +97,6 @@ function productForm() {
     {
       key : 'color',
       type: 'color'
-    },
-    {
-      type   : 'buttons',
-      actions: [{
-        label     : 'remove',
-        action    : removeTag,
-        attributes: {
-          class: 'btn btn-warning',
-        }
-      }]
     }
   ];
 
@@ -112,7 +118,7 @@ function productForm() {
         attributes: {
           class: 'btn btn-primary'
         }
-      }]
+      }, removeButton]
     }
   ];
 
