@@ -18,7 +18,7 @@ module.exports = function(wallaby) {
 
     compilers: {
       '**/*.js': wallaby.compilers.babel({
-        presets: [ 'es2015-loose', 'stage-1'],
+        presets: [ ['es2015', {loose: true}], 'stage-1'],
         plugins: [
           'syntax-flow',
           'transform-decorators-legacy',
