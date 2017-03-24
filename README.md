@@ -1,6 +1,6 @@
 # swan-example-client
 
-A showcase client, which includes auth, orm, datatable and more, including:
+A show-case client, which includes auth, orm, datatable and more, including:
 
 - Making separate lists
 - Creating items in todo lists
