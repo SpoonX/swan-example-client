@@ -1,8 +1,0 @@
-<template>
-  <form submit.delegate="save()">
-    <div class="form-group">
-      <input type="text" class="form-control" t="[placeholder]What todo, what todo..." value.bind="list.name & validate">
-    </div>
-    <button type="submit" class="btn btn-success" t="Create list" disabled.bind="controller.errors.length"></button>
-  </form>
-</template>

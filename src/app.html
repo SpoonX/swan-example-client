@@ -1,0 +1,29 @@
+<template>
+  <require from="styles/main.less"></require>
+  <require from="component/core/nav-bar.html"></require>
+  <require from="humane-js/themes/jackedup.css"></require>
+  <require from="c3/c3.min.css"></require>
+
+  <nav-bar router.bind="router" username.bind="username" authenticated.bind="authenticated"></nav-bar>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="page-header" t="${router.currentInstruction.config.title}"></h1>
+        <router-view></router-view>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted pull-left">
+        SpoonX &copy; <span t="No rights reserved"></span>.
+      </p>
+      <p class="text-muted pull-right">
+        <strong t="Change language"></strong>:
+        <span repeat.for="language of languages">
+          <img class="language" click.trigger="setLanguage(language)" src.bind="'https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.7.0/flags/1x1/'+language.flag+'.svg'">
+        </span>
+      </p>
+    </div>
+  </footer>
+</template>

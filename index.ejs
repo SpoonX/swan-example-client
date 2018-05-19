@@ -2,15 +2,15 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Aurelia Navigation Skeleton</title>
+    <title><%- htmlWebpackPlugin.options.metadata.title %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <base href="/">
+    <base href="<%- htmlWebpackPlugin.options.metadata.baseUrl %>">
     <!-- imported CSS are concatenated and added automatically -->
   </head>
   <body aurelia-app="main">
-    
+    <% if (htmlWebpackPlugin.options.metadata.server) { %>
     <!-- Webpack Dev Server reload -->
     <script src="/webpack-dev-server.js"></script>
-    
-  <script type="text/javascript" src="/app.51ee22666590587d7fe3.bundle.js"></script><script type="text/javascript" src="/vendor.51ee22666590587d7fe3.bundle.js"></script></body>
+    <% } %>
+  </body>
 </html>

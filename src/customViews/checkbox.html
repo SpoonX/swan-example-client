@@ -1,0 +1,16 @@
+<template>
+  <require from="aurelia-form/component/form-group"></require>
+  <h4 class="text-danger">Custom checkbox</h4>
+  <form-group element.bind="element" message.bind="message">
+    <div class="checkbox">
+      <label>
+        <input
+          type="checkbox"
+          t.bind="label"
+          name.bind="element.key"
+          checked.bind="element.value">
+          ${label}
+      </label>
+    </div>
+  </form-group>
+</template>
